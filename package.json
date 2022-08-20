@@ -1,24 +1,14 @@
 {
-  "dependencies": {
-    "express": "^4.18.1",
-    "uuid": "^8.3.2"
-  },
-  "scripts": {
-    "start": "node server.js"
-  },
   "name": "note-taker",
-  "description": "",
   "version": "1.0.0",
+  "description": "",
   "main": "server.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/drerudin/Note-Taker.git"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/drerudin/Note-Taker/issues"
-  },
-  "homepage": "https://github.com/drerudin/Note-Taker#readme"
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }

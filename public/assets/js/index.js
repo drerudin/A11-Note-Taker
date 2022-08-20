@@ -4,15 +4,6 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
-
-const init = () => {
-  noteTitle = document.getElementById("note-title");
-  noteText = document.getElementById("note-text");
-  saveNoteBtn = document.getElementById("save-note");
-  newNoteBtn = document.getElementById("new-note");
-  noteList = document.getElementById("note-list");
-}
-
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
@@ -35,7 +26,12 @@ const hide = (elem) => {
 let activeNote = {};
 
 const getNotes = () =>
-  fetch('/api/notes').then((res) => res.json()).catch((err) => console.log(err));
+  fetch('/api/notes', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
 
 const saveNote = (note) =>
   fetch('/api/notes', {
@@ -44,12 +40,15 @@ const saveNote = (note) =>
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
-  }).then((res) => res.json());
+  });
 
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
     method: 'DELETE',
-  }).then((res) => res.json());
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
