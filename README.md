@@ -13,3 +13,5 @@ Application that allows you to add notes to the sidebar by clicking the "+" icon
 
 
 # Screenshot
+
+![image](https://user-images.githubusercontent.com/99576524/187122088-4d0be536-8085-49f3-9757-2b0612e8bc0c.png)
