@@ -10,7 +10,7 @@ Application that allows you to add notes to the sidebar by clicking the "+" icon
 
 # Github
 
-
+https://github.com/drerudin/A11-Note-Taker
 
 # Screenshot
 
